@@ -8,17 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Aug 2021 06:30:01 +0200</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Google Summer of Code 2021</title>
+      <title>GSoC: VLC macOS interface redesign</title>
       <link>/posts/gsoc-2021/</link>
       <pubDate>Mon, 23 Aug 2021 06:30:01 +0200</pubDate>
       
       <guid>/posts/gsoc-2021/</guid>
-      <description>Introduction For the 2021&amp;rsquo;s summer, I participated in the Google Summer of Code.
-I contributed to the VLC media player, through the project titled VLC macOS interface redesign.
-Overview The goal for the project is to implement the newly designed interface for the next major release 4.0.
-The new interface follows modern look and feel for macOS.
-This interface is implemented in native Cocoa API, using Objective-C.
-A basic implementation was already in-place, however, the UI/UX aspects were largerly not implemented.</description>
+      <description>Description of my contribution to VLC media player, during GSoC 2021</description>
     </item>
     
   </channel>
