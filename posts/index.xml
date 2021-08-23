@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Samuel&#39;s blog</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Samuel&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Aug 2021 15:18:51 +0200</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First Post</title>
+      <link>/posts/first-post/</link>
+      <pubDate>Mon, 23 Aug 2021 15:18:51 +0200</pubDate>
+      
+      <guid>/posts/first-post/</guid>
+      <description>Test this is a test</description>
+    </item>
+    
+    <item>
+      <title>Google Summer of Code 2021</title>
+      <link>/posts/gsoc-2021/</link>
+      <pubDate>Mon, 23 Aug 2021 06:30:01 +0200</pubDate>
+      
+      <guid>/posts/gsoc-2021/</guid>
+      <description>Introduction For the 2021&amp;rsquo;s summer, I participated in the Google Summer of Code.
+I contributed to the VLC media player, through the project titled VLC macOS interface redesign.
+Overview The goal for the project is to implement the newly designed interface for the next major release 4.0.
+The new interface follows modern look and feel for macOS.
+This interface is implemented in native Cocoa API, using Objective-C.
+A basic implementation was already in-place, however, the UI/UX aspects were largerly not implemented.</description>
+    </item>
+    
+  </channel>
+</rss>
