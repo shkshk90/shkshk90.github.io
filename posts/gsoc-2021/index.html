@@ -80,6 +80,55 @@ The new interface follows modern look and feel for macOS.</p>
 <p>This interface is implemented in native Cocoa API, using Objective-C.<br>
 A basic implementation was already in-place, however, the UI/UX aspects were largerly not implemented.<br>
 Additionally, some logic needed to be either implemented, or updated.</p>
+<h2 id="commits">Commits</h2>
+<ul>
+<li><a href="https://code.videolan.org/videolan/vlc/-/commit/40735bea5fd7d9f61f65e0d32fcbff5127824e7c">macosx: Implement the new gui for release 4.0</a></li>
+</ul>
+<p>This commit contains the main work.
+It implements the following features.</p>
+<h3 id="main-window">Main Window</h3>
+<p>The main window is redesigned to have 4 tabs,
+each tab represents a functionality.</p>
+<p>Inside each tab, you get either an empty view at the start,
+or a collection view.</p>
+<p><img src="/img/first-view.png" alt="Main View (Video, empty)">
+<img src="/img/streams-view.png" alt="Streams View"></p>
+<h3 id="using-native-cocoa-apis-for-browse-tab">Using native Cocoa APIs for Browse tab</h3>
+<p>Normally, the four tabs rely on the VLC media library for filling their content.<br>
+However, the media library currently supports very basic navigation for local items.<br>
+Thus, native Cocoa APIs were used instead.</p>
+<p>The main bulk of the implementation was in integrating the API in a way that plays nicely<br>
+with the already in place functionality.<br>
+As the old functionality relied on VLC media library API only, care was taken to bridge
+the native API, without the need to duplicating the functionality twice.</p>
+<p><img src="/img/browse-view-I.png" alt="Browse View">
+<img src="/img/browse-view-II.png" alt="Browse View"></p>
+<h3 id="implementing-and-updating-the-bottom-bar">Implementing and updating the bottom bar</h3>
+<p>The bottom bar is the bar that contains the play info for VLC.<br>
+The new redesign includes translucency, new buttons, new colors, and an updated look.</p>
+<p>Additionally, if the mouse hovers on the progress bar, its size increases (see image II below).</p>
+<p><img src="/img/now-playing-I.png" alt="An item is playing">
+<img src="/img/now-playing-II.png" alt="An item is playing, mouse on progress bar."></p>
+<ul>
+<li><a href="https://code.videolan.org/videolan/vlc/-/commit/f6275d44cf2ffb7bea37cb77657c3f1e4a5f3329">Add pitch control to MacOS Audio Effects Panel</a></li>
+<li><a href="https://code.videolan.org/videolan/vlc/-/commit/97354723bca5a13bf9160c642ac942336c3ffb43">macosx: Add stereo_pan filter</a></li>
+</ul>
+<h3 id="implementing-advanced-audio-effects-panel">Implementing Advanced Audio Effects Panel</h3>
+<p>The advanced tab in the audio effects panel was implemented.
+It contains 2 new filters, pitch control, and stereo pan.</p>
+<p>Although other tabs normally used 1 enable button for all the
+filters available through it, yet for the advanced tab, it was decided
+to use 1 enable button per filter.</p>
+<p>The reason for this is that the sterea pan filter is alters the audio over the whole value range.
+Thus, if enabled, it always affects the audio.</p>
+<p>This will render the pitch control un-usable, therefore, it was decided to implement one button per filter.</p>
+<p><img src="/img/audio-effects.png" alt="New advanced audio effects panel"></p>
+<ul>
+<li><a href="https://code.videolan.org/videolan/vlc/-/commit/24c76d8af25efa5e5f589300adb85cbd479775ea">macosx: Add minor enhancements to library view</a></li>
+<li><a href="https://code.videolan.org/videolan/vlc/-/commit/98838a772486c168c375e1ea93cf89081646b766">macosx: Fix tiny bugs in volume control</a></li>
+</ul>
+<h3 id="tiny-bug-fixes">Tiny bug fixes</h3>
+<p>Some bug fixes on the UI.</p>
 
 		</div>
 	</article>
